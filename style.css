@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  width: 100%;
+  padding: 20px 0;
+  height: calc(100vh);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 50%;
+  display: flex;
+  border: 2px solid #fff;
+  padding: 15px;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+
+.score-card {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 5px;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.score-card p {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.score-card span {
+  font-size: 48px;
+}
+
+main {
+  /* background-color: aqua; */
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.triangle {
+  transform: scale(0.8);
+}
+
+.option {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: beige;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.paper {
+  top: 20%;
+  left: 40%;
+}
+.scissors {
+  right: 40%;
+  top: 20%;
+}
+
+.rock {
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+}
+
+button {
+  text-transform: uppercase;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  position: relative;
+  padding: 5px 20px;
+  display: inline-block;
+  align-self: flex-end;
+  margin-right: 20px;
+}
