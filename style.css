@@ -18,7 +18,7 @@ body {
 header {
   width: 50%;
   display: flex;
-  border: 2px solid #fff;
+  border: 2px solid hsl(217, 16%, 45%);
   padding: 15px;
   border-radius: 10px;
   justify-content: space-between;
@@ -33,6 +33,7 @@ header {
   border-radius: 5px;
   align-items: center;
   padding: 10px 0;
+  color: hsl(229, 25%, 31%);
 }
 
 .score-card p {
@@ -51,7 +52,8 @@ main {
   position: relative;
 }
 
-.start {
+.start,
+.game {
   position: absolute;
   top: 0;
   left: 0;
@@ -60,6 +62,11 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.start.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .triangle {
@@ -74,32 +81,42 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
   cursor: pointer;
+  position: absolute;
+}
+
+.option:nth-child(1) {
+  top: 10%;
+  left: 37%;
+}
+
+.option:nth-child(2) {
+  right: 37%;
+  top: 10%;
+}
+
+.option:nth-child(3) {
+  bottom: 13%;
+  left: 50%;
+  transform: translate(-50%, -20%);
 }
 
 .paper {
-  top: 10%;
-  left: 37%;
   box-shadow: hsl(230, 89%, 65%) 0px 0px 0px 13px inset,
     0px 7px hsl(230, 89%, 62%);
 }
+
 .scissors {
-  right: 37%;
-  top: 10%;
   box-shadow: hsl(40, 84%, 53%) 0px 0px 0px 13px inset,
     0px 7px hsl(39, 89%, 49%);
 }
 
 .rock {
-  bottom: 13%;
-  left: 50%;
-  transform: translate(-50%, -20%);
   box-shadow: hsl(349, 70%, 56%) 0px 0px 0px 15px inset,
     0px 7px hsl(349, 71%, 52%);
 }
 
-button {
+.rules-btn {
   text-transform: uppercase;
   background: transparent;
   border: 1px solid #fff;
@@ -110,4 +127,136 @@ button {
   display: inline-block;
   align-self: flex-end;
   margin-right: 20px;
+  cursor: pointer;
+}
+
+.game {
+  flex-direction: column;
+  justify-content: start;
+}
+
+.players {
+  /* padding: 0px 3% 0px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 100px; */
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; */
+  /* width: 44%; */
+}
+
+.players h3 {
+  margin: 60px 0;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+.game-options {
+  min-width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.opt {
+  background-color: #fff;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.opt.scissors {
+  box-shadow: hsl(40, 84%, 53%) 0px 0px 0px 25px inset,
+    0px 7px hsl(39, 89%, 49%);
+}
+
+.opt.paper {
+  box-shadow: hsl(230, 89%, 65%) 0px 0px 0px 25px inset,
+    0px 7px hsl(230, 89%, 62%);
+}
+
+.opt.rock {
+  box-shadow: hsl(349, 70%, 56%) 0px 0px 0px 25px inset,
+    0px 7px hsl(349, 71%, 52%);
+}
+
+.opt img {
+  width: 40%;
+}
+
+.comp-opt {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.info {
+  width: 220px;
+  margin: 100px 40px 0px;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info p {
+  font-size: 42px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.info button {
+  width: ;
+  background-color: #fff;
+  /* outline: none; */
+  border: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.rules-div {
+  width: 26%;
+  height: 60%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 5px 2%;
+}
+
+.rules-div-header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.rules-div-header h1 {
+  text-transform: uppercase;
+  font-size: 24px;
 }

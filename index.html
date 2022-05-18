@@ -28,11 +28,11 @@
       <img class="logo" src="/images/logo.svg" alt="" />
       <div class="score-card">
         <p>score</p>
-        <span>12</span>
+        <span>13</span>
       </div>
     </header>
     <main>
-      <section class="start">
+      <section class="start hidden">
         <img class="triangle" src="/images/bg-triangle.svg" alt="" />
         <div class="opt-div">
           <div class="option paper">
@@ -46,8 +46,39 @@
           </div>
         </div>
       </section>
+      <section class="game">
+        <!-- <div class="players">
+        </div> -->
+        <div class="game-options">
+          <div class="players">
+            <h3 class="player">you picked</h3>
+            <div class="player-opt opt scissors">
+              <img src="/images/icon-scissors.svg" alt="" />
+            </div>
+          </div>
+          <div class="info">
+            <p>you lose</p>
+            <button type="button">play again</button>
+          </div>
+          <div class="players">
+            <h3 class="computer">the house picked</h3>
+            <div class="opt rock">
+              <img src="/images/icon-rock.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <button type="button">rules</button>
+    <button type="button" class="rules-btn">rules</button>
+    <section class="overlay hidden">
+      <div class="rules-div">
+        <div class="rules-div-header">
+          <h1>rules</h1>
+          <img src="/images/icon-close.svg" alt="close button" />
+        </div>
+        <img src="/images/image-rules.svg" alt="rules" />
+      </div>
+    </section>
     <!-- <div class="rules">rules</div> -->
   </body>
 </html>
