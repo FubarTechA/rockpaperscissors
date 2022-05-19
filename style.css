@@ -64,7 +64,8 @@ main {
   justify-content: center;
 }
 
-.start.hidden {
+.start.hidden,
+.game.hidden {
   opacity: 0;
   pointer-events: none;
 }
@@ -195,16 +196,17 @@ main {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  margin-top: 50px;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
 .info {
-  width: 220px;
-  margin: 100px 40px 0px;
-  /* background-color: aqua; */
+  width: 170px;
+  margin: 150px 40px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  display: none;
 }
 
 .info p {
@@ -215,11 +217,19 @@ main {
 }
 
 .info button {
-  width: ;
+  width: 100%;
   background-color: #fff;
-  /* outline: none; */
+  padding: 10px 0;
   border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: hsl(229, 25%, 31%);
 }
+
+/* CSS FOR THE OVERLAY SECTION  */
 
 .overlay {
   position: fixed;
@@ -231,7 +241,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .overlay.hidden {
@@ -259,4 +269,8 @@ main {
 .rules-div-header h1 {
   text-transform: uppercase;
   font-size: 24px;
+}
+
+.close {
+  cursor: pointer;
 }
