@@ -52,6 +52,8 @@ main {
   position: relative;
 }
 
+/* CSS FOR THE START PAGE  */
+
 .start,
 .game {
   position: absolute;
@@ -98,6 +100,8 @@ main {
   transform: translate(-50%, -20%);
 }
 
+/* CSS FOR THE BOX SHADOWS ACCORDING TO HAND  */
+
 .paper {
   box-shadow: hsl(230, 89%, 65%) 0px 0px 0px 13px inset,
     0px 7px hsl(230, 89%, 62%);
@@ -113,6 +117,8 @@ main {
     0px 7px hsl(349, 71%, 52%);
 }
 
+/* CSS FOR THE RULES BUTTON  */
+
 .rules-btn {
   text-transform: uppercase;
   background: transparent;
@@ -127,22 +133,17 @@ main {
   cursor: pointer;
 }
 
+/* CSS FOR THE GAME PAGE  */
+
 .game {
   flex-direction: column;
   justify-content: start;
 }
 
 .players {
-  /* padding: 0px 3% 0px; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* height: 100px; */
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between; */
-  /* width: 44%; */
 }
 
 .players h3 {
@@ -168,6 +169,8 @@ main {
   align-items: center;
   justify-content: center;
 }
+
+/* CSS FOR THE BOX SHADOWS ACCORDING TO CKICKED OPTION AND HAND  */
 
 .opt.scissors {
   box-shadow: hsl(40, 84%, 53%) 0px 0px 0px 25px inset,
@@ -276,6 +279,9 @@ main {
 .close {
   cursor: pointer;
 }
+
+/* CSS FOR SMALLER SCREENS  */
+
 @media only screen and (max-width: 600px) {
   header {
     width: 85%;
@@ -339,6 +345,8 @@ main {
     margin-right: 0;
     font-size: 18px;
   }
+
+  /* CSS FOR THE GAME PAGE  */
 
   .game {
     margin-top: 20%;
@@ -415,23 +423,28 @@ main {
     font-size: 16px;
   }
 
+  /* CSS FOR THE OVERLAY SECTION  */
+
   .rules-div {
-    /* width: 100%;
+    width: 100%;
     height: 100%;
-    padding: 0; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    border-radius: 0%;
   }
 
   .rules-div-header {
-    /* width: 100%;
+    width: 100%;
     height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 30px; */
-    display: none;
+    display: block;
+    margin: 50px 0 80px;
+    text-align: center;
   }
 
   .close {
     position: absolute;
+    bottom: 10%;
   }
 }
