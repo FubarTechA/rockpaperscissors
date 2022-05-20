@@ -73,8 +73,8 @@ main {
 }
 
 .option {
-  width: 140px;
-  height: 140px;
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
   background-color: beige;
   display: flex;

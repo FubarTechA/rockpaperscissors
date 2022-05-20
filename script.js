@@ -16,10 +16,10 @@ const infoBtn = infoDiv.querySelector("button");
 
 let playerhand;
 let comphand;
-let score = 0;
 const data = localStorage.getItem("score");
+let score = data;
 
-scoreCard.textContent = data;
+scoreCard.textContent = score;
 // scoreCard.textContent = score;
 
 const computerhands = ["rock", "paper", "scissors"];
@@ -92,7 +92,7 @@ optionDiv.addEventListener("click", function (e) {
 
     if (playerhand === comphand) {
       infoPara.textContent = "draw";
-      scoreCard.textContent = score;
+      // scoreCard.textContent = score;
     }
 
     if (playerhand === "rock") {
