@@ -17,7 +17,9 @@ const infoBtn = infoDiv.querySelector("button");
 let playerhand;
 let comphand;
 const data = localStorage.getItem("score");
-let score = data;
+if (!data) {
+  score = 0;
+} else score = data;
 
 scoreCard.textContent = score;
 // scoreCard.textContent = score;
